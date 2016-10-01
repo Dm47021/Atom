@@ -24,7 +24,6 @@ import java.util.TimerTask;
 public class Client extends Activity {
 
     private ImageView barcodeCheckMark;
-    private SurfaceView cameraView;
     private CameraSource cameraSource;
     private BarcodeDetector barcodeDetector;
 
@@ -66,7 +65,6 @@ public class Client extends Activity {
     }
 
     private void setupCamera() {
-        cameraView = (SurfaceView) findViewById(R.id.cameraview);
 
         barcodeDetector =
                 new BarcodeDetector.Builder(this)
@@ -125,26 +123,26 @@ public class Client extends Activity {
             }
         });
 
-        cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(SurfaceHolder holder) {
-                try {
-                    if (checkSelfPermission(permission.CAMERA) == PackageManager.PERMISSION_GRANTED)
-                        cameraSource.start(cameraView.getHolder());
-                } catch (IOException ie) {
-                    Log.e("CAMERA SOURCE", ie.getMessage());
-                }
-            }
+        //cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
+        //    @Override
+        //    public void surfaceCreated(SurfaceHolder holder) {
+        //        try {
+        //            if (checkSelfPermission(permission.CAMERA) == PackageManager.PERMISSION_GRANTED)
+        //                cameraSource.start(cameraView.getHolder());
+        //        } catch (IOException ie) {
+        //            Log.e("CAMERA SOURCE", ie.getMessage());
+        //        }
+        //    }
 
-            @Override
-            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            }
+        //    @Override
+        //    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+        //    }
 
 
-            @Override
-            public void surfaceDestroyed(SurfaceHolder holder) {
-                cameraSource.stop();
-            }
-        });
+        //    @Override
+        //    public void surfaceDestroyed(SurfaceHolder holder) {
+        //        cameraSource.stop();
+        //    }
+        //});
     }
 }
