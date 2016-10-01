@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
 
-        <activity android:name=".Client">
+        <!-- The Client Software Itself is MainActivity-->
+        <activity android:name=".MainActivity"> <!-- The Client Software -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
