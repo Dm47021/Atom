@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+<!-- DM47021 CUSTOM COLORS XML -->
+      <color name="White">#fff</color> <!-- White -->
+     <color name="Light_grey">#A1A1A1</color> <!-- light grey -->
+
+<!-- Vintage Romantic Theme Colors -->  
+     <color name="VR_THEME_LIGHT_SAND">#F2EEB3</color> <!-- Light Sand -->  
+     <color name="VR_THEME_MEDIUM_SAND">#BFAF80</color> <!-- Medium Sand -->  
+     <color name="VR_THEME_COFFEE_CREAM">#8C6954</color> <!-- Coffee & Cream --> 
+     <color name="VR_THEME_COFFEE">#59323C</color> <!-- Coffee --> 
+     <color name="VR_THEME_ROYAL_PURPLE">#260126 </color> <!-- Royal Purple --> 
+     <color name="VR_THEME_DARK_ROYAL_PURPLE">#2D2437 </color> <!-- Dark Royal Purple --> 
+</resources> 

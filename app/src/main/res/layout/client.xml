@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.osiris.osirislauncher.Launcher"
+    android:background="@drawable/background">
+
+    <DigitalClock 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"
+        android:gravity="top|left"
+        android:textColor="@color/White"
+        android:textSize="18sp"/>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+ 
+    <TextView
+        android:id="@+id/textViewBatteryInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="top|right"
+        android:textColor="@color/White"
+        android:textSize="14sp"
+        android:text="Battery Info: " />
+ 
+    <ImageView
+        android:id="@+id/imageViewBatteryState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_battery" />
+ 
+</LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:rowOrderPreserved="false"
+        android:background="@android:color/transparent">
+
+        <!-- SCAN BUTTON -->
+        <android.support.v7.widget.CardView  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_LIGHT_SAND"
+            android:id="@+id/scannerbutton"
+            style="@style/card_style">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_phone_scan"/>
+            <SurfaceView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="23dp"
+                android:id="@+id/cameraview" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barcode_found"
+                android:src="@drawable/ic_checkmark"
+                android:visibility="invisible"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="Scan Barcode"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- FILEMANGER BUTTON -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_MEDIUM_SAND"
+            android:id="@+id/filemanagerbutton"
+            style="@style/card_style">
+ 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_filemanager"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="File Manager"/>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- HISTORY BUTTON -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_COFFEE_CREAM"
+            android:id="@+id/historybutton"
+            style="@style/card_style">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_user_history"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="History"/>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- SETTINGS BUTTON -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_COFFEE"
+            android:id="@+id/settingsbutton"
+            style="@style/card_style">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_settings"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="Settings"/>
+
+        </android.support.v7.widget.CardView> 
+
+        <!-- HELP BUTTON -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_ROYAL_PURPLE"
+            android:id="@+id/helpbutton"
+            style="@style/card_style">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_help"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="Help"/>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- LOGOUT BUTTON -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/VR_THEME_DARK_ROYAL_PURPLE"
+            android:id="@+id/logoutbutton"
+            style="@style/card_style">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_logout"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="top|left"
+                android:textSize="16dp"
+                android:textColor="@color/Light_grey"
+                android:text="Logout"/>
+
+        </android.support.v7.widget.CardView>
+
+    </GridLayout>
+
+</FrameLayout>
