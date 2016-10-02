@@ -23,6 +23,8 @@ import java.util.TimerTask;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = LoginActivity.class.getSimpleName();
+
     private ImageView barcodeCheckMark;
     private CameraSource cameraSource;
     private BarcodeDetector barcodeDetector;
