@@ -13,15 +13,36 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
 
-        <!-- The Client Software Itself is MainActivity-->
-        <activity android:name=".MainActivity"> <!-- The Client Software -->
+        <!-- LoginActivity -->
+        <activity android:name=".LoginActivity" 
+                  android:clearTaskOnLaunch="true"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme.Dark" 
+                  android:launchMode="singleInstance"
+                  android:stateNotNeeded="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.HOME"/>
+          <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter >
+            <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+           <action android:name="com.oxisys.client.LoginActivity"/>
+         <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.Dark" />
+
+
+        <!-- The Client Software Itself is MainActivity-->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".SignupActivity" android:theme="@style/AppTheme.Dark" />
     </application>
 
