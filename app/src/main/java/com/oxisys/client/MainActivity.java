@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.Manifest.permission;
-import android.util.Log;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -33,6 +32,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // hide statusbar of Android
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission_group.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission.CAMERA)) {
@@ -46,6 +49,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         barcodeCheckMark = (ImageView) findViewById(R.id.barcode_found);
         setupCamera();
+    }
+
+public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     @Override
