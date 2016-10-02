@@ -23,7 +23,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
- 
+
     <TextView
         android:id="@+id/textViewBatteryInfo"
         android:layout_width="wrap_content"
@@ -54,14 +54,14 @@
 
         <!-- SCAN BUTTON -->
         <android.support.v7.widget.CardView  xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_LIGHT_SAND"
+            card_view:cardBackgroundColor="@color/md_deep_purple_900"
             android:id="@+id/scannerbutton"
             style="@style/card_style">
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_phone_scan"/>
+                android:src="@drawable/ic_phone_scan"
+                android:tint="@color/md_grey_50"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,86 +75,83 @@
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="Scan Barcode"/>
         </android.support.v7.widget.CardView>
 
         <!-- FILEMANGER BUTTON -->
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_MEDIUM_SAND"
+            card_view:cardBackgroundColor="@color/md_purple_700"
             android:id="@+id/filemanagerbutton"
             style="@style/card_style">
- 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_filemanager"/>
-
+                android:src="@drawable/ic_filemanager"
+                android:tint="@color/md_grey_50"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="File Manager"/>
 
         </android.support.v7.widget.CardView>
 
         <!-- HISTORY BUTTON -->
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_COFFEE_CREAM"
+            card_view:cardBackgroundColor="@color/md_deep_purple_700"
             android:id="@+id/historybutton"
             style="@style/card_style">
-
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_user_history"/>
-
+                android:src="@drawable/ic_user_history"
+                android:tint="@color/md_grey_50"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="History"/>
 
         </android.support.v7.widget.CardView>
 
         <!-- SETTINGS BUTTON -->
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_COFFEE"
+            card_view:cardBackgroundColor="@color/md_purple_500"
             android:id="@+id/settingsbutton"
             style="@style/card_style">
-
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_settings"/>
-
+                android:src="@drawable/ic_settings"
+                android:tint="@color/md_grey_50"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="Settings"/>
 
         </android.support.v7.widget.CardView> 
 
         <!-- HELP BUTTON -->
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_ROYAL_PURPLE"
+            card_view:cardBackgroundColor="@color/md_deep_purple_500"
             android:id="@+id/helpbutton"
             style="@style/card_style">
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_help"/>
+                android:src="@drawable/ic_help"
+                android:tint="@color/md_grey_50"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,21 +159,22 @@
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="Help"/>
 
         </android.support.v7.widget.CardView>
 
         <!-- LOGOUT BUTTON -->
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            card_view:cardBackgroundColor="@color/VR_THEME_DARK_ROYAL_PURPLE"
+            card_view:cardBackgroundColor="@color/md_purple_300"
             android:id="@+id/logoutbutton"
             style="@style/card_style">
 
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_logout"/>
+                android:src="@drawable/ic_logout"
+                android:tint="@color/md_grey_50"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +182,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="top|left"
                 android:textSize="16dp"
-                android:textColor="@color/Light_grey"
+                android:textColor="@color/white"
                 android:text="Logout"/>
 
         </android.support.v7.widget.CardView>
