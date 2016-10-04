@@ -102,8 +102,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        // Start main Activity Upon Sucessful login
-        Intent intent = new Intent(this, MainActivity.class);
+        // Start Welcome Activity Upon Sucessful login
+        Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }
 

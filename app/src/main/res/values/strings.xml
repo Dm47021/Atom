@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Oxisys Client</string>
+    <string name="client_version">Oxisys Client Software v2.1</string>
 </resources>
